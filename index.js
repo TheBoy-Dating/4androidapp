@@ -16,6 +16,18 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+  push: {
+    android: {
+      senderId: '595582289181',
+      apiKey: 'AIzaSyAke3Z76JwVlXnxynVDqouqu2coGs4_VL0',
+    },
+    ios: {
+      pfx: '',
+      passphrase: '',
+      bundledId: '',
+      production: false
+    }
+  }    
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
@@ -53,3 +65,5 @@ httpServer.listen(port, function() {
 
 // This will enable the Live Query real-time server
 ParseServer.createLiveQueryServer(httpServer);
+//THEBOY App
+var api3 = newparaserver
